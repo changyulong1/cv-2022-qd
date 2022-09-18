@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>我的简历</title>
+  <style>* {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eee;
+      margin: 20px 0;
+    }
+
+    article {
+      width: 21cm;
+      min-height: 29.7cm;
+      background: white;
+      margin: 0 auto;
+      overflow: auto;
+      padding: 1em;
+    }</style>
+  <style media="print">body {
+      margin: 0;
+    }
+
+    .page2 {
+      page-break-before: always;
+      margin-top: 18px;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }</style>
+  <style>body {}
+
+    p {
+      margin: .3em 0;
+    }
+
+    h1 {
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    strong {
+      font-weight: normal;
+      color: #f60;
+    }
+
+    a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+
+    p,
+    li {
+      color: #666;
+    }
+
+    strong {
+      font-weight: normal;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+
+    .bio {
+      position: relative;
+    }
+    .bio > p{
+      display: flex;
+      margin: 10px 0;
+
+    }
+    .bio > p > span{
+      flex: 1;
+    }
+
+    .bio img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }</style>
+
+  <style>.projects {}
+
+    .projects p {
+      color: #666;
+      font-style: "宋体";
+    }
+
+    .projects strong {
+      color: rgb(246, 162, 162);
+      font-weight: 600;
+    }
+
+    .projects strong.title {
+      font-weight: 700;
+      color: #666;
+    }
+
+    .projects>ol {
+      margin-top: 0;
+      list-style-position: inside;
+      padding: 0;
+    }
+
+    .projects>ol>li {
+      /* margin-bottom: 24px; */
+    }
+
+    .projects>ol>li>header {
+      display: flex;
+      justify-content: space-between;
+    }
+    .projects>ol>li h3 {
+      display: inline-block;
+      margin: 10px 0 ;
+    }
+    .projects>ol>li>p{
+      margin: 10px 0;
+    }</style>
+  <style>.skills {}
+
+    #skills {
+
+      width: 500px;
+      height: 270px;
+    }
+
+    @media print {
+      #skills {
+        display: none;
+      }
+    }
+
+
+    .skills>.wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .skills>.wrapper>:first-child {
+      margin-right: 24px;
+    }
+
+    .skills>.wrapper>#skills {}
+
+    .skills>.wrapper>ul {
+      color: #666;
+    }
+
+    .skills>.wrapper strong {
+      color: rgb(17, 13, 13);
+      font-weight: 500;
+    }
+
+
+
+    .skills>.wrapper>ul>li {
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }</style>
+  <style>.openSource {}
+
+    .openSource>h2 {
+      margin: 20px 0;
+    
+    }
+
+    .openSource header img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .openSource>ul {}
+
+    .openSource>ul>li {
+      margin-bottom: 24px;
+    }
+
+    .openSource header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .openSource h3 {}</style>
+  <style>.jobs {}
+
+    .jobs>h2 {}
+
+    .jobs>ol {}
+
+    .jobs>ol>li {
+      margin: 12px 0;
+    }
+
+    .jobs header {
+      display: flex;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .jobs header>h3 {
+      font-size: 18px;
+
+    }
+
+    .jobs header>h4 {
+      margin-left: 1em;
+      font-size: 18px;
+    }
+
+    .jobs header>span {
+      font-size: 18px;
+      margin-left: auto;
+    }</style>
+  <style>@media (max-width: 500px) {
+      body {
+        margin: 0;
+      }
+
+      article {
+        width: auto;
+        height: auto;
+      }
+
+      .bio img {
+        display: none;
+      }
+
+      .skills .wrapper {
+        flex-direction: column;
+      }
+
+      #skills {
+        width: auto;
+      }
+
+      .jobs header {
+        flex-direction: column;
+      }
+
+      .jobs header>h3,
+      .jobs header>h4,
+      .jobs header>span {
+        margin: 0;
+      }
+    }
+    .link{
+        text-align: right;
+      }</style>
+  <style>.miaoshu>P{
+      margin: 10px 20px;
+   }
+   .jili > li{
+    margin: 10px 20px;
+   }
+   .mokuai > li{
+    margin: 10px 0;
+   }
+   @media print {
+  /*强制分页*/
+    .print-page1{
+      padding-top: 6px;
+    }
+    ul > li{
+     
+    }
+    .projects > ol > li > header{
+      margin: 0;
+    }
+    .projects > ol > li >p{
+      margin: 0;
+    }
+    .bio{
+      padding-top: 24px;
+    }
+    .print-jili{
+      padding-top: 20px;
+    }
+    .print-page {
+      /* page-break-after: auto; */
+    }
+  }</style>
+</head>
+
+<body>
+  <article>
+    <section class="bio">
+      <h1>常玉龙</h1>
+      <!-- <img src="https://pic2.zhimg.com/v2-d206f673b1e7b8a7e3b31bc8041e05e2_xll.jpg" alt="" width="100" height="100"> -->
+      <p>
+        <span>姓名：男 </span> <span>求职意向：web前端开发</span>
+      </p>
+      <P> <span>邮箱：853044263@qq.com</span> <span>学历：大专</span></P>
+      <p>
+        <span>手机：15837062137</span>               <span>微信：15837062137</span> 
+      </p>
+    </section>
+    <section class="projects">
+      <h2>项目经历</h2>
+      <ol>
+        <li>
+          <header>
+            <h3>简易记账 （Vue2 版）</h3>
+          </header>
+          <p><strong class="title"><strong class="title"><strong class="title">技术栈：</strong></strong></strong>Vue 2/ES6 /TypeScript /VueRouter /Vuex/Sass/Element UI</p>
+          <ol class="mokuai">
+            <li class="miaoshu">
+              <strong class="title">项目描述：</strong>
+              <p>
+                这是一款<strong>记账应用</strong>用户可以进行日常圣后各项收支流水的记账。简单的<strong>加减运算，添加编辑标签，书写备注，</strong>查看历史账目信息，<strong>可视化</strong>查看等功能。用户记账的各项数据均采用<strong>本地存储</strong>方式。
+              </p>
+            </li>
+            <li>
+              <strong class="title">项目经历：</strong>
+              <ul class="jili">
+                <li>
+                  基于<strong>Vue2、TypeScript</strong>和<strong>vue-cli</strong>脚手架构建开发，进行TypeScript与Vue之间的配置。将页面进行<strong>组件化拆分</strong>，使具组件<strong>可复用</strong>。用<strong>VueRouter</strong>编写<strong>前端路由</strong>。使用<strong>Sass</strong>作为<strong>css的预处理</strong>，使用<strong>Vuex工具</strong>管理用户数据状态。并用<strong>localStorage存储</strong>和<strong>读取用户数据</strong>，使页面<strong>数据持久化</strong>。
+                </li>
+                <li>
+                  可视化部分<strong>引入Echarts模块</strong>，实现<strong>数据可视化</strong>。使用<strong>Element UI</strong>部分组件，实现创建日期选择，账单删除交互等
+                </li>
+              
+              <div class="link">
+                <a href="https://github.com/changyulong1/Bookkeeping-demo">源码链接</a>
+              <a href="https://changyulong1.github.io/Bookkeeping/#/Count">项目预览</a>
+              </div>
+            </ul></li>
+          </ol>
+        </li>
+        <li>
+          <header>
+            <h3>简易记账 （React17 初始化版）</h3>
+          </header>
+          <p><strong class="title"><strong class="title">技术栈：</strong></strong>React 17/ES6 /TypeScript /ReactRouterDom/StyledCcomponents </p>
+          <ol class="mokuai">
+            <li class="miaoshu">
+              <strong class="title">项目描述：</strong>
+              <p>
+                这是一款<strong>记账应用</strong>用户可以进行日常各项收支流水的记账。简单<strong>录入收支金额，添加编辑标签，书写备注，</strong>查看历史<strong>账目信息</strong>。用户 用户记账的各项<strong>数据</strong>均采用<strong>本地存储</strong>方式。 
+              </p>
+            </li>
+            <li>
+              <strong class="title">项目经历：</strong>
+              <ul class="jili">
+                <li>
+                  基于<strong>React17、TypeScript、Webpack</strong>和<strong>react-app</strong>脚手架进行开发 ，使用<strong>React Hoosk</strong>函数式组件编程，将页面进行<strong>组件拆分</strong>，使其组件可以<strong>复用</strong>，使用<strong>styled-components</strong> 工具库实现css的私有化，编写<strong>css样式</strong>，并用<strong>react-router-dom</strong>工具库配置<strong>前端路由</strong>。 并用<strong>localStorage存储</strong>和<strong>读取</strong>用户数据，使页面数据<strong>持久化</strong>。 
+                </li>
+                <li>
+                  使用<strong>ES6模块化</strong>.封装模拟用户数据，使用<strong>自定义Hoosk</strong> 封装用户数据添加，删除，修改等功能
+                </li>
+               
+              
+              <div class="link">
+                <a href="https://github.com/changyulong1/react-wang">源码链接</a>
+              <a href="https://changyulong1.github.io/jizhang1/index.html">项目预览</a>
+              </div>
+            </ul></li>
+          </ol>
+        </li>
+        <li>
+          <header>
+            <h3>日记博客</h3>
+          </header>
+          <p><strong class="title"><strong class="title">技术栈：</strong></strong>Vue 2/ES6/ /Vue Router/Axios /Vuex/Sass/Element UI</p>
+          <ol class="mokuai">
+            <li class="miaoshu"><strong class="title">项目介绍：</strong>
+              <p>这是一款<strong>博客应用</strong>，用户可以进行日常的笔记、心情的记录，可以简单的<strong>创建，编辑/删除、注册/登录，查看</strong>别人博客等。主要页面：注册/登录页面、创建/编辑页面、首页、主页等</p>
+            </li>
+            <li class="print-jili print-page ">
+              <strong class="title">实现经历：</strong>
+              <ul class="jili">
+                <li>
+                  基于<strong>vue2、webpack</strong>和<strong>vue-cli</strong>脚手架进行开发。将页面<strong>组件拆分</strong>，使其<strong>组件可复用</strong>。用<strong>Sass</strong>作为<strong>css的预处理</strong>，使用<Strong>Element UI</Strong>制作部分页面交互，用<strong>VueRouter</strong>配置<strong>前端路由</strong>，使用<strong>路由导航守卫</strong>判断是否登录跳转页面。
+                  使用<strong>ES6模块化</strong>，用<strong>Axios封装</strong>请求，配合<strong>vuex</strong>状态管理，封装<strong>注册、登录，编辑、删除</strong>等功能
+                </li>
+              </ul></li></ol>
+            </li>
+          
+          <div class="link">
+            <a href="https://github.com/changyulong1/boke-deom">源码链接</a>
+            <a href="https://changyulong1.github.io/boke/#/">项目预览</a>
+          </div>
+        
+        <li>
+          <header>
+            <h3>Go UI组件库(Vue3 版)</h3>
+          </header>
+          <p><strong class="title"><strong class="title">技术栈：</strong></strong>Vue3/ES6/TypeScript/Vue Router/Sass</p>
+          <ol class="mokuai">
+            <li class="miaoshu">
+              <strong class="title">项目描述：</strong>
+              <p>这是一款<strong>UI组件库</strong>，主要组件有<strong>layout布局组件、各种样式按钮、switch组件、顶部弹出消息、弹窗式对话框、input组件，切换标签Tabs组件</strong>等。</p>
+            </li>
+            <li>
+              <strong class="title">项目经历：</strong>
+              <ul class="jili">
+                <li>基于<strong>vue3、TypeScript</strong>和<strong>Vite</strong>前端开发工具进行开发。分析需求，<strong>合理设计组件</strong>进行组件开发，使用前端路由<strong>VueRouter</strong>搭建<strong>SFC单文件</strong>应用。根据<strong>Vue3新特性</strong>和<strong>功能</strong>使用<strong>组合式API</strong>，围绕<Strong>setup</Strong>入口函数进行编程，用<strong>props</strong>和<strong>自定义事件</strong>解决父子组件之间的<strong>通信问题</strong>，使用<strong>inject、provide组合方式</strong>实现<strong>跨级访问</strong>组件组件属性和方法。</li>
+                <li>封装对话框和弹出消息组件时，用<strong>函数式编程</strong>的思想，创建<strong>虚拟节点</strong>，并<strong>render</strong>渲染实现换出组件。组件封装需要注意影响<strong>最小化原则</strong>，各项设置尽量只能影响自己封装的组件，不要影响用户项目编写不要与用户常见命名冲突</li>
+               
+              </ul>
+              <div class="link">
+                <a href="https://github.com/changyulong1/goui-deom/tree/master/guIU">源码链接</a>
+                <a href="https://changyulong1.github.io/goLongUi/">项目预览</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <!-- <li>
+          <header>
+            <h3>Go UI组件库（Vue2(版) ）</h3>
+          </header>
+          <p><strong class="title"><strong class="title">技术栈：</strong></strong>Vue2/ES6/Vue Router/Sass/</p>
+          <ol class="mokuai">
+            <li class="miaoshu">
+              <strong class="title">项目描述：</strong>
+              <P>这是一款UI组件库内主要组件有Switch、Button、Dialog、Tabs、Carousel等。</P>
+            </li>
+            <li >
+              <strong class="title">项目经历：</strong>
+              <ul class="jili">
+                <li>基于Vue2 、Webpack和Vue-cli脚手架开发，分析需求，开发过程明确思路将各个组件合理设计，使用前端路由VueRouter搭建SFC单文件应用，实现高效模块化编程开发,进行组件化的拆分，将具备重复功能的组件进行复用，使用props和自定义事件解决父子组件之间的通信问题。</li>
+                <li>封装组件需要注意影响最小化原则，各项设置尽量只能影响自己封装的组件，不要影响用户项目编写不要与用户常见命名冲突</li>
+               
+              </ul>
+              <div class="link">
+                <a href="https://github.com/changyulong1/deom1-wangcai">源码链接</a>
+                <a href="https://changyulong1.github.io/goui/#/">项目预览</a>
+              </div>
+            </li>
+          </ol>
+        </li> -->
+          <li>
+            <header>
+              <h3>锤子商城</h3>
+            </header>
+            <p><strong class="title"><strong class="title">技术栈：</strong></strong>Vue 2/Webpack/ES6 /Vue Router /Vuex/Sass/Element UI</p>
+            <ol class="mokuai">
+              <li class="miaoshu"> <strong class="title">项目描述：</strong>
+                <p>网站模仿了商城的部分功能，用户可以查看<strong>商品详情</strong>，通过点击商品下方的查看详情和添加购物车按钮，查看商品<strong>详情</strong>和添加<strong>购物车</strong>，点击进入我的订单页面，可以<strong>添加</strong>和<strong>删除</strong>收货地址等功能。</p>
+              </li>
+              <li><strong class="title">项目经历：</strong>
+                <ul class="jili">
+                  <li>基于<strong>Vue2、webpack</strong>和<strong>vue-cli</strong>脚手架开发，将页面进行组件化的拆分，使组件可复用。使用<strong>Sass</strong>作为<strong>css的预处理</strong>，并用<strong>vueRouter</strong>配置<strong>前端路由</strong>，用<strong>props</strong>和<strong>自定义事件</strong>解决父子组件之间的通信。</li>
+                  <li> 使用<strong>ES6模块化</strong>，模拟商品信息，使用<strong>vuex</strong>状态管理，封装<strong>地址添加，购物车添加</strong>等过功能</li>
+                </ul>
+              </li>
+            </ol>
+            <div class="link">
+              <a href="https://github.com/changyulong1/hammer-deom">源码链接</a>
+              <a href="https://changyulong1.github.io/hammer/index.html#/">项目预览</a>
+            </div>
+          </li>
+          <li>
+            <header>
+              <h3>会动的代码</h3>
+            </header>
+            <p><strong class="title">技术栈：</strong>html /css /javaScript/highlight.js</p>
+            <ol class="mokuai">
+              <li class="miaoshu">
+                <strong class="title">项目描述：</strong>
+                <p>这是一款<strong>自动生成</strong>动画网站，用户进入网站可以看到动态生成动画，用户可以点击<strong>播放，暂停，快速，中速</strong>可以<strong>控制</strong>动画的速度</p>
+              </li>
+              <li>
+                <strong class="title">项目经历：</strong>
+                <ul class="jili">
+                  <li>使用<strong>html，css</strong>构建<strong>页面布局</strong>，使用<strong>原生JS</strong>实现<strong>css加载</strong>和<strong>控制速度</strong>等功能。引入<strong>highlight.js</strong>实现css样式<strong>代码高亮</strong></li>
+                </ul>
+                <div class="link">
+                  <a href="https://github.com/changyulong1/CanMove-deom">源码链接</a>
+                  <a href="https://changyulong1.github.io/CanMove/">项目预览</a>
+                </div>
+              </li>
+            </ol>
+          </li>
+        <li class="print-page1">
+          <header>
+            <h3>前航网站</h3>
+          </header>
+          <p><strong class="title">技术栈：</strong>html /css /javaScript/jquery</p>
+          <ol class="mokuai">
+            <li class="miaoshu"><strong class="title">项目描述：</strong>
+              <p>这是一款<strong>导航网站</strong>,网站<strong>预设收录</strong>了前端技术相关常用网站，用户也可以<strong>自行添加</strong>导航网站。前端工作者、初学着和爱好者，可以将网站为导航，一键进入抢断相关技术网站、文档和论坛，进行学习交流和提升。用户记录的<strong>各项数据</strong>，采用<strong>本地存储</strong>方式</p>
+            </li>
+            <li class="print-page1"><strong class="title">项目经历：</strong>
+              <ul class="jili">
+                <li>使用<strong>html，css</strong>构建<strong>页面布局</strong>，</li>
+                <li>使用<strong>form标签</strong>实现<strong>索搜功能</strong>。用<strong>jQuery</strong>实现标签网址<strong>添加、删除</strong>功能，并用<strong>localStorage</strong>实现<strong>数据持久化</strong></li>
+              </ul>
+            </li>
+          </ol>
+          <div class="link">
+            <a href="https://github.com/changyulong1/daohang">源码链接</a>
+            <a href="https://changyulong1.github.io/daohang/dist/index.html">项目预览</a>
+          </div>
+        </li>
+        <li>
+          <header>
+            <h3>在线画板</h3>
+          </header>
+          <p><strong class="title">技术栈：</strong>html /css /javaScript</p>
+          <ol class="mokuai">
+            <li class="miaoshu">
+              <strong class="title">项目描述：</strong>
+              <p>这是一款基于<strong>原生JS</strong>构建的<strong>在线画板</strong>网站。用户可以在网站做一些简单的绘画,可以<strong>选择不同颜色</strong>的画笔制作不同颜色的图画和<strong>清空、橡皮擦</strong>功能</p>
+            </li>
+            <li> 
+              <strong class="title">项目经历：</strong>
+              <ul class="jili">
+                <li>使用<strong>html、css</strong>实现<strong>页面的布局</strong>,使用<strong>Canvas</strong>实现网站画板</li>
+                <li>使用<strong>原生JS</strong>实现<strong>绘画、切换画笔和橡皮擦</strong>功能</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="link">
+            <a href="https://github.com/changyulong1/DrawingBoard">源码链接</a>
+            <a href="https://changyulong1.github.io/DrawingBoard/index.html">项目预览</a>
+          </div>
+        </li>
+    
+      </ol>
+    </section>
+    <section class="skills">
+      <h2>技能</h2>
+      <div class="wrapper">
+        <!-- <div id="skills"></div> -->
+        <ul>
+          <li>熟悉页面制作技巧，能将设计稿完美还原 </li>
+          <li>熟悉<strong>前后端分离技术</strong>，包括 <strong>AJAX、跨域、前端路由、Cookie、Session </strong>等</li>
+          <li>熟练 <strong>Vue全家桶</strong>的使用，包括<strong> VueCli、VueRouter、Vuex</strong> 等</li>
+          <li>熟练 <strong>React全家桶</strong>的使用，包括 <strong>create-react-app、ReactRouter、Redux</strong> 等</li>
+          <li>熟悉 <strong>ES6</strong>，包括 let /const / Promise / await / 析构赋值/模块化</li>
+          <li>了解<strong> TypeScript</strong>的使用，我的项目就是 TS 实现的</li>
+          <li>了解<strong>Webpack</strong> 的<strong>配置</strong>和<strong>优化</strong></li>
+        </ul>
+      </div>
+    </section>
+    <section class="others">
+      <h2>工作经历</h2>
+      <ul>
+        <li>2019/8-2022/6  郑州蜜雪冰城股份有限公司：店长 </li>
+        <li>2017/3-2018/12 东莞市桃媳妇食品有限公司：客服</li>
+      </ul>
+    </section>
+    <section class="others">
+      <h2>其他链接</h2>
+      <ul>
+        <li><a href="https://juejin.cn/user/3633251122155704">我的博客</a>，目前已有 70多 篇技术文章</li>
+        <li><a href="https://github.com/changyulong1">我的 GitHub</a>，过去三个月有 200 次提交</li>
+      </ul>
+    </section>
+
+
+  </article>
+  <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
+  <script src="main.1b613724.js"></script>
+</body>
+
+</html>
